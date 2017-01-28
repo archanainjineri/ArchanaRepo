@@ -1,0 +1,30 @@
+package capitalone;
+/*
+ * Luhn algorithm  
+
+ */
+public class Luhn {
+
+	public static void main(String[] args) {
+		String acctNo = "7992739871";
+		String[] acctNum = acctNo.split("");
+		int[] ints = new int[acctNum.length];
+		int[] res = new int[acctNum.length];
+
+		for (int i=0; i< ints.length ; i++){
+			ints[i] = Integer.parseInt(acctNum[i]);
+			System.out.print(" "+ints[i]);
+		}
+		System.out.println();
+	
+		for (int i=0; i<=ints.length-1 ; i++){
+			if(ints.length % 2 ==0){
+				System.out.println(ints[i+1] * 2);
+			}
+			
+			}
+		}
+		
+	}
+
+

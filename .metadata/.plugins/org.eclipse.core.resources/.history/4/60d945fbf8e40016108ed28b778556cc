@@ -1,0 +1,46 @@
+package sparkcental;
+
+import java.util.Stack;
+
+public class Calculator {
+
+	//Constructor
+	public Calculator(){
+		
+	}
+
+	public static void main(String[] args){
+		
+		Calculator calcObj = new Calculator();
+		String expression = "1+1-7*6/9p2";
+		char[] charExpression = expression.toCharArray();
+		System.out.println("Expression "+expression+" is evaluated to " + calcObj.evalExpression(charExpression));
+		
+	
+		
+	}
+	
+	public int evalExpression(char[] input){
+		Stack operandStack = new Stack();
+		Stack operatorStack = new Stack();
+		
+		for( char c: input){
+			if (Character.isDigit(c)){
+				operandStack.push(c);
+			}
+			if (isOperator(c)){
+				operatorStack.push(c);
+			}
+		}
+		System.out.println(operandStack);
+		System.out.println(operatorStack);
+		return 1;
+	}
+
+	public static boolean isOperator(char c){
+		//if( c =='*' | c == '+' | c == '-' | c =='/' )
+		if("+-*/pow".indexOf(c) != -1)
+			return true;
+		return false;
+	}
+}

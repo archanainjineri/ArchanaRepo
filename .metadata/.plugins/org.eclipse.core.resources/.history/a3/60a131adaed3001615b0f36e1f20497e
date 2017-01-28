@@ -1,0 +1,60 @@
+import java.util.Arrays;
+import java.util.Comparator;
+
+public class LongestWord {
+
+	//public static  String[] list = {"nnnnnmmmmmmmmmn", "HelloHiHello", "Hello","Hi","HelloHiHiHello"} ;
+	//public static  String[] list = {"test", "tester", "testertest","testing","testingtester"} ;
+	
+	public static  String[] list = {"Hi", "How", "are","you","hello"} ;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method st ub
+		
+		
+		//Sort the input array list in descending order using custom comparator
+		 Arrays.sort(list, new comp());
+		
+		//Prints the sorted array
+		System.out.println("Sorted Array in descending order is : "+ Arrays.toString(list));
+		
+		String ans = getLongWord(list);
+		
+		if(ans != null){
+		System.out.println(" Longest Word is : "  + ans );
+		System.out.println(" Length of Longest word is ; "+ ans.length());
+		}else
+			System.out.println("Wrong input");
+		
+	}
+	
+	public static String getLongWord(String[] inputList){
+		String ans = null;
+		for(int i = 0; i< list.length ; i++){
+			if(checkLongest(list[i],i).length() == 0){
+				ans= list[i];
+				return list[i];
+			}
+		}
+		
+		return ans;
+	}
+
+	public static String checkLongest(String str, int k){
+		String temp = str;
+		for(int i=k+1; i< list.length-1;i++){
+			if(str.contains(list[i]) ){
+				str = str.replace(list[i], "");
+				temp = str;
+			}
+		}
+		System.out.println(str);
+		return temp;
+	}
+
+}
+
+
+
+
+ 

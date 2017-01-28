@@ -1,0 +1,36 @@
+import java.util.HashMap;
+
+
+public class TwoSum {
+	public static void main(String[] args){
+		//int[] A = {2,7,11,15};
+		//int[] A= {-555,879,-20,8,55,120};
+		int[] A = {100, 15, 6 , 144 , 88 , -85 , -28 , 70, 104 ,-58, 65 ,128 ,90 ,45, 117,162, 29};
+		int target =9;
+		
+	if(getTwoSum(A,target)){
+		
+			System.out.println("YEs");
+		}
+	else{
+		System.out.println("No");
+	}
+		
+	}
+
+	public static boolean getTwoSum(int[] A, int target ){
+		boolean flag =false;;
+		HashMap<Integer,Integer> map = new HashMap<Integer,Integer>();
+		for (int i =0 ;i< A.length ; i++){
+			if(map.containsKey(A[i])){				
+			flag = true;
+			break;
+			}
+			else{
+			map.put(target-A[i], i);
+			}
+		}
+		
+		return flag;
+	}
+}

@@ -1,0 +1,13 @@
+package capitalone;
+/*
+ * Luhn algorithm  
+
+ */
+public class Luhn {
+
+	public static void main(String[] args) {
+		String acctNo = "7992739871";
+		Integer[] acctNum = Integer.parseUnsignedInt(acctNo.split(""));
+	}
+
+}

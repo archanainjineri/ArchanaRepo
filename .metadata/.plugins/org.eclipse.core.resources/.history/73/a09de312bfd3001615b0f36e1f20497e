@@ -1,0 +1,43 @@
+/*
+ * Author: Archana Injineri
+ * 
+ * Logic:
+ * 
+ * No. of apples Gia has = (x + 2)
+ * No. of apples Maddie has = x
+ * 
+ * Total Apples = No. of apples Gia has + No. of apples Maddie has
+ * 
+ * 10 = (x + 2) + x
+ * 10 = 2 + 2x
+ * (10 - 2)/ 2 = x
+ * 
+ * Therefore, x = (Total - More ) / 2
+ * 
+ * Gia has  = x + more  Apples
+ * Maddie has = x  Apples
+ * 
+ */
+public class ParkerGenious {
+
+	public static void main(String[] args) throws Exception {
+		/*int total = Integer.parseInt(args[0]);
+		int more = Integer.parseInt(args[1]);*/
+		int total = 50;
+		int more = 6;
+		
+		System.out.println(total);
+		System.out.println(more);
+		
+		computeCount(total, more);
+
+
+	}
+
+	public static void computeCount(int total, int more){
+		int applecount = (total - more)/2;
+		System.out.println(applecount + more);
+		System.out.println(applecount);
+	
+	}
+}

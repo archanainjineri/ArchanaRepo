@@ -1,0 +1,45 @@
+package capitalone;
+/*
+ * Luhn algorithm  
+
+ */
+public class Luhn {
+
+	public static void main(String[] args) {
+		String acctNo = "7992739871";
+		String[] acctNum = acctNo.split("");
+		int[] ints = new int[acctNum.length];
+		int[] res = new int[acctNum.length];
+		int temp =0;
+		int sum = 0;
+		for (int i=0; i< ints.length ; i++){
+			ints[i] = Integer.parseInt(acctNum[i]);
+			System.out.print(" "+ints[i]);
+		}
+		System.out.println();
+		if(ints.length % 2 ==0){
+		for (int i=1; i<=ints.length-1 ; i+=2){
+				System.out.println(ints[i-1]);
+				sum += ints[i-1];
+				temp = ints[i]*2;
+				if(temp > 9){
+					String[] s = (""+temp).split("");
+					int[] a = new int[2];
+					a[0] = Integer.parseInt(s[0]);
+					a[1] = Integer.parseInt(s[1]);
+				System.out.println(a[0]+a[1]);
+				sum += (a[0]+a[1]);
+				}
+				else{
+					System.out.println(temp);
+					sum += temp;
+				}
+			}
+			
+			}
+		System.out.println("Sum is : " + (10 - (sum/10)));
+		}
+		
+	}
+
+

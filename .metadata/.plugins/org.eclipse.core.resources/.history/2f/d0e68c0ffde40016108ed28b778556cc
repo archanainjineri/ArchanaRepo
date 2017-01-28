@@ -1,0 +1,58 @@
+package sparkcental;
+
+import java.util.Stack;
+
+public class Calculator {
+
+	//Constructor
+	public Calculator(){
+		
+	}
+
+	public static void main(String[] args){
+		
+		Calculator calcObj = new Calculator();
+		String expression = "1+1";
+		char[] charExpression = expression.toCharArray();
+		System.out.println("Expression "+expression+" is evaluated to " + calcObj.evalExpression(charExpression));
+	
+		
+	}
+	
+	public double evalExpression(char[] input){
+		Stack operandStack = new Stack();
+		Stack operatorStack = new Stack();
+		int op1 =0;
+		int op2 = 0;
+		char op = '';
+		
+		for( char c: input){
+			if (Character.isDigit(c)){
+				operandStack.push( Character.getNumericValue(c));
+			}
+			if (isOperator(c)){
+				if(operatorStack.isEmpty())
+				operatorStack.push(c);
+				else{
+					char temp = (char)operatorStack.peek();
+					if(temp == '+' | temp == '-')
+				}
+			}
+		}
+		System.out.println(operandStack);
+		System.out.println(operatorStack);
+		
+		int x =(int)operandStack.pop();
+		int y = (int)operandStack.pop();
+		double result  = Operation.ADD.calculate(x, y);
+		return result;
+	}
+
+	public static boolean isOperator(char c){
+		//if( c =='*' | c == '+' | c == '-' | c =='/' )
+		if("+-*/".indexOf(c) != -1)
+			return true;
+		return false;
+	}
+	
+}

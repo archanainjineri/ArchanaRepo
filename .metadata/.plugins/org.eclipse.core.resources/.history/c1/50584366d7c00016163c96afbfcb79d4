@@ -1,0 +1,14 @@
+
+public class ReverseStringRec {
+	
+	public static void main(String[] args){
+		String s = "Abcdef";
+		
+		System.out.println(reverseString(s));
+	}
+	
+	public static String reverseString(String s){
+		return (reverseString(s.substring(1)))+s.charAt(0);
+	}
+
+}

@@ -1,0 +1,52 @@
+package serviceNow;
+
+public class ReverseWords {
+
+	public static void main(String[] args) {
+		ReverseWords obj = new ReverseWords();
+		
+		String sentence = "Hi Heloo How are you";
+		obj.getReverseOfSentence(sentence);
+		String word = "Hello";
+		//obj.reverseWords(word);
+		
+	}
+
+	void getReverseOfSentence(String sentence){
+		
+		String[] part = sentence.split(" ");
+		
+		StringBuilder strbuilder = new StringBuilder();
+		
+		strbuilder.append(reverseWords(part[part.length-1]));
+		
+		for(int i = part.length-2 ; i>=0 ; i--){
+			strbuilder.append(' '+reverseWords(part[i]));
+		}
+		System.out.println(strbuilder);
+	}
+	
+	String reverseWords(String word){
+		char[] charArray = word.toCharArray();
+		String res = null;
+		int len = charArray.length;
+		for (int i=0; i<=(len/2)-1; i++){
+			swap(charArray, i, len-i-1);
+		}
+		//return charArray.toString();
+		return new String(charArray);
+	}
+	void swap(char[] c, int x, int y){
+		char temp = c[x];
+		c[x] = c[y];
+		c[y] = temp;
+	}
+	
+	//Reverse recusrsively
+	
+	public String reverseRecursive(String s){
+		if(s.length() == 0)
+			return s;
+		return reverseRecursive(s.substring(1)+s.charAt(0));
+	}
+}

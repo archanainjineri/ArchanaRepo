@@ -1,0 +1,13 @@
+package capitalone;
+
+public class ValidString {
+
+	public static void main(String[] args) {
+		String s = "123(13(44))";
+		char[] arr = s.toCharArray();
+		for(char c: arr  ){
+			System.out.print(c);
+		}
+	}
+
+}

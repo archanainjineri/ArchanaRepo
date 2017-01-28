@@ -1,0 +1,13 @@
+/*
+ * finding unique element in an array that has other elements in pair
+ */
+package serviceNow;
+
+public class uniqueElement {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

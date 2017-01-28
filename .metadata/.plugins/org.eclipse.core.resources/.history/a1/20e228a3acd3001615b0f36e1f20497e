@@ -1,0 +1,57 @@
+import java.util.Arrays;
+import java.util.Comparator;
+
+public class LongestWord {
+
+	//public static  String[] list = {"nnnnnmmmmmmmmmn", "HelloHiHello", "Hello","Hi","HelloHiHiHello"} ;
+	//public static  String[] list = {"test", "tester", "testertest","testing","testingtester"} ;
+	
+	public static  String[] list = {"test", "test", "test","test","testtesttest"} ;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method st ub
+		
+		
+		//Sort the input array list in descending order using custom comparator
+		 Arrays.sort(list, new comp());
+		
+		//Prints the sorted array
+		System.out.println("Sorted Array in descending order is : "+ Arrays.toString(list));
+		
+		String ans = getLongWord(list);
+		System.out.println(" Longest Word is : "  + ans );
+		System.out.println(" Length of Longest word is ; "+ ans.length());
+		
+	}
+	
+	public static String getLongWord(String[] inputList){
+		String ans = null;
+		for(String word: inputList){
+			if(checkLongest(word).length() == 0){
+				ans= word;
+				return word;
+			}
+		}
+		
+		return ans;
+	}
+
+	public static String checkLongest(String str){
+		String temp = str;
+		for(int i=1; i< list.length;i++){
+			if(str.contains(list[i]) ){
+				str = str.replace(list[i], "");
+				//return str;
+				temp = str;
+			}
+		}
+		System.out.println(str);
+		return temp;
+	}
+
+}
+
+
+
+
+ 

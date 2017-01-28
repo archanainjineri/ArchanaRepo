@@ -1,0 +1,9 @@
+package capitalone;
+
+public class ValidString {
+
+	public static void main(String[] args) {
+		String s = "123(13(44))";
+	}
+
+}

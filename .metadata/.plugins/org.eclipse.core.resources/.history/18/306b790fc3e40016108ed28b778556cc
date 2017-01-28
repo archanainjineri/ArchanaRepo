@@ -1,0 +1,36 @@
+package capitalone;
+
+import java.util.Stack;
+
+public class ValidString {
+
+	public static void main(String[] args) {
+		
+		ValidString obj = new ValidString();
+		String s = "123(13(44))";
+		char[] arr = s.toCharArray();
+		//print
+		for(char c: arr  ){
+			System.out.print(c);
+		}
+		System.out.println();
+		//Stack
+		if(obj.checkValid(arr)){
+			System.out.println("Valid");
+		}
+		else{
+			System.out.println("Not Valid");
+		}
+	}//main
+	
+	public boolean checkValid(char[] s){
+		Stack st = new Stack();
+		
+		for(char c: s){
+		st.push(c);
+		System.out.println(st);
+		}
+		return true;
+	}
+
+}

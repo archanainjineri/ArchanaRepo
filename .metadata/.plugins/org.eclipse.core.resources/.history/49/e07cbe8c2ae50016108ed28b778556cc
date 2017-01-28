@@ -1,0 +1,41 @@
+package sparkcental;
+
+public enum Operation {
+    ADD(2, '+'),
+    SUB(2, '-'),
+    MULT(1, '*'),
+    DIV(1, '/');
+    private int precision;
+    private char operator;
+
+    private Operation(int precision, char operator){
+    	this.precision = precision;
+    	this.operator = operator;
+    }
+    
+    public int getPrecision(){
+    	return this.precision;
+    }
+    
+    public char getOperator(){
+    	return this.operator;
+    }
+    
+    int calculate(int x, int y) {
+        switch (this) {
+            case ADD:
+                return x + y;
+            case SUB:
+                return x - y;
+            case MULT:
+                return x * y;
+            case DIV:
+                return x / y;
+            default:
+                throw new AssertionError("Invalid Operator" + this);
+        }
+    }
+    
+   
+
+}

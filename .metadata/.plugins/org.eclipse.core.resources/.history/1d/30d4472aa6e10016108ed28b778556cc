@@ -1,0 +1,33 @@
+
+/*
+ * Write code to decode strings. For example, String str = "3[a2[bd]g4[ef]h]", 
+ * the output should be "abdbdgefefefefhabdbdgefefefefhabdbdgefefefefh". 
+ */
+package facebook;
+public class StringDisplay {
+
+	public static void main(String[] args) {
+	String[] L = {"This", "is","a","document"};
+	String[] M = {"This", "is","is","a","document","document"};
+	
+	is_all_items_in_list(L, M);
+	}
+	
+	static boolean is_all_items_in_list(String[] L, String[] M) {
+        int i =0 ;int j= 0;
+        
+        while(i < L.length){
+            if(L[i].equals(M[j])){
+                i++;
+                j++;
+            }
+            else{
+               j++;
+            }
+            
+        }
+
+    return true;
+    }
+}
+

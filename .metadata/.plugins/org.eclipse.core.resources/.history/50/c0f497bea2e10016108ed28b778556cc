@@ -1,0 +1,13 @@
+
+/*
+ * Write code to decode strings. For example, String str = "3[a2[bd]g4[ef]h]", 
+ * the output should be "abdbdgefefefefhabdbdgefefefefhabdbdgefefefefh". 
+ */
+package facebook;
+public class StringDisplay {
+
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,0 +1,16 @@
+import java.util.Arrays;
+
+
+public class LongestWord {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String[] list = {"HelloHi", "Hi", "Hello"} ;
+		
+		 Arrays.sort(list);
+		System.out.println("First non repeating char is : "+ list.toString());
+
+	}
+
+}

@@ -1,0 +1,22 @@
+
+public class ParkerGenious {
+
+	public static void main(String[] args) throws Exception {
+		int total = Integer.parseInt(args[0]);
+		int more = Integer.parseInt(args[1]);
+		
+		System.out.println("total is "+ total);
+		System.out.println("more is "+ more);
+		
+		computeCount(total, more);
+
+
+	}
+
+	public static void computeCount(int total, int more){
+		int applecount = (total - more)/2;
+		System.out.println("Gia: "+ applecount + more);
+		System.out.println("Maddie: "+ applecount);
+	
+	}
+}

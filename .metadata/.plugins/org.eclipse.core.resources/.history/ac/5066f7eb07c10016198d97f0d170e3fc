@@ -1,0 +1,9 @@
+
+public class ReverseStrWithSpace {
+
+	public static void main(String[] args){
+		
+		String s = " I am not String";
+		System.out.println(s);
+	}
+}

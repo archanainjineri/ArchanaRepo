@@ -1,0 +1,18 @@
+package sparkcental;
+
+public class Calculator {
+	public static void main(String[] args){
+		
+		Calculator calcObj = new Calculator();
+		String expression = "1+1-4*4+1";
+		char[] charExpression = expression.toCharArray();
+		System.out.println("Expression "+expression+" is evaluated to " + evalExpression(charExpression));
+		
+		
+	}
+	
+	public int evalExpression(char[] input){
+		return 1;
+	}
+
+}

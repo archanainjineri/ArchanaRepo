@@ -1,0 +1,43 @@
+
+public class ReverseStrWithSpace {
+
+	public static void main(String[] args){
+		
+		String s = "I am not String";
+		String result = reverseStringPreserveSpace(s);
+		System.out.println(s);
+		System.out.println(result);
+	}
+	
+	public static String reverseStringPreserveSpace(String s){
+		Character[] StrArray = new Character[s.length()];
+		
+		for (int i = 0; i<s.length() ; i++){
+			StrArray[i] = s.charAt(i);
+		}
+		int l = s.length();
+		int i =0;
+		int j = 15 ;
+		System.out.println("j = "+ j);
+		while( i < 7){
+			System.out.println("i = "+ i);
+			
+				while(j > 7){
+					System.out.println("j = "+ j);
+					char temp = StrArray[i];
+					StrArray[i] = StrArray[j];
+					StrArray[j] = temp;
+					j--;
+				}
+			
+			i++;
+		}
+		return StrArray.toString();
+	}
+	
+	public static void swap(char a, char b){
+		char temp = a;
+		b = a;
+		a = temp;
+	}
+}

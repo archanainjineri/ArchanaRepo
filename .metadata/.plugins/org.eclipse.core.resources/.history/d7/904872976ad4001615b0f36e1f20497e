@@ -1,0 +1,26 @@
+package serviceNow;
+
+public class ReverseWords {
+
+	public static void main(String[] args) {
+		ReverseWords obj = new ReverseWords();
+		
+		String sentence = "Hi Heloo How are you";
+		obj.getReverseOfSentence(sentence);
+		
+	}
+
+	void getReverseOfSentence(String sentence){
+		
+		String[] part = sentence.split(" ");
+		
+		StringBuilder strbuilder = new StringBuilder();
+		
+		strbuilder.append(part[part.length-1]);
+		
+		for(int i = part.length-2 ; i>0 ; --i){
+			strbuilder.append(" "+part[i]);
+		}
+		System.out.println(strbuilder);
+	}
+}

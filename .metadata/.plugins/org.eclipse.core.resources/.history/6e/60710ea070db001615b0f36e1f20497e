@@ -1,0 +1,5 @@
+package PizzaDesign;
+
+public interface Pizza {
+
+}
