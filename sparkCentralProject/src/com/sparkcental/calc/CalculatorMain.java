@@ -8,6 +8,10 @@ package com.sparkcental.calc;
 
 import java.util.Scanner;
 
+
+/*
+ * calc main class
+ */
 public class CalculatorMain {
 	
 	public static void main(String[] args) {
