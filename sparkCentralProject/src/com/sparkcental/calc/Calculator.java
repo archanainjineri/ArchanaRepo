@@ -1,6 +1,6 @@
 /*
  * Calculator Library:
- * This class computes arithmetic 
+ * This class implements arithmetic 
  * expressions at once considering order 
  * of operations using stack
  * 
