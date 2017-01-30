@@ -8,14 +8,11 @@ package com.sparkcental.calc;
 
 import java.util.Scanner;
 
-
-/*
- * calc main class
- */
 public class CalculatorMain {
 	
 	public static void main(String[] args) {
 
+		//Calc obj
 		Calculator calcObj = new Calculator();
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the Infix Expression here ");
